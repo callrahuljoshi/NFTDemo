@@ -3,21 +3,29 @@ Deploy an NFT project on Ethereum
 
 This Tutorial assumes you have installed nodejs and npm
 
+## Pre requisites
+1.  Install Metamask
+2.  Some ethers in rinkbey faucet (Have it by tagging rinkbey on twitter and get things)
+3.  Alchemy account for blockchain node provider and create an app there
+
+![image](https://user-images.githubusercontent.com/4149775/141731821-5bc7f36b-4aba-4e20-bde8-3c6c2bed3072.png)
+
+
 ## Start Hardhat Project
 
 Create a new directory and install hardhat
 ```
-mkdir NFTutorial
-cd NFTutorial
+mkdir NftDemoFinal
+cd NftDemoFinal
 npm install --save-dev hardhat
 ```
 
-We recommend reviewing the [hardhat documentation and tutorial](https://hardhat.org).
+I recommend reviewing the [hardhat documentation and tutorial](https://hardhat.org).
 
 Next, start a hardhat project
 
 ```
-npx hardhat
+npx hardhat NFT-Tutorial-main
 ```
 
 Select "Create a sample hardhat project". You can say yes to everything.
@@ -34,7 +42,7 @@ npm install @openzeppelin/contracts
 
 You can delete Greeter.sol.
 
-In the contracts folder, create a new solidity file called NFTee.sol and add the code from the [sample NFTee.sol contract](https://github.com/BlockDevsUnited/NFT-Tutorial/blob/main/contracts/NFTee.sol) in this repo.
+In the contracts folder, create a new solidity file called NFTee.sol and add the code from the [sample NFTee.sol contract](https://github.com/callrahuljoshi/NFTDemo/blob/main/NFT-Tutorial-main/contracts/NFTee.sol) in this repo.
 
 Try customizing the solidity code with the name of your NFT.
 
@@ -52,8 +60,13 @@ We are going to deploy the NFT contract on the Rinkeby Testnet.
 
 First, make sure you get some rinkeby testnet Ether.  You can get some here: https://faucet.rinkeby.io/
 
+![image](https://user-images.githubusercontent.com/4149775/141732171-13bf57f5-65ed-4452-92fe-199909b77aa0.png)
+
+
 Next, set up a rinkeby provider. You can get one from alchemyapi.io
 It should look like: https://eth-rinkeby.alchemyapi.io/v2/......
+
+![image](https://user-images.githubusercontent.com/4149775/141732232-d5702efb-6efc-429e-8a06-e23ef978b36b.png)
 
 Next, configure module.exports in hardhat.config.js
 
